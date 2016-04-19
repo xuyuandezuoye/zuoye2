@@ -1,1 +1,274 @@
+
+Administrator@YH-201602051838 MINGW32 ~
+$ git push orifatal: Not a git repository: ''
+fatal: Not a git repository (or any of the parent directories): .git
+
+Administrator@YH-201602051838 MINGW32 ~
+$ git push origin dev
+fatal: Not a git repository (or any of the parent directories): .git
+
+Administrator@YH-201602051838 MINGW32 ~
+$ cd /d
+
+Administrator@YH-201602051838 MINGW32 /d
+$ cd testgit/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (master)
+$ git push origin dev
+error: src refspec dev does not match any.
+error: failed to push some refs to 'http://github.com/Barneyness/testgit.git'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (master)
+$ git branch
+* master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (master)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git branch
+* dev
+  master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git push origin dev
+Total 0 (delta 0), reused 0 (delta 0)
+To http://github.com/Barneyness/testgit.git
+ * [new branch]      dev -> dev
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git remote rm origin
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git remote add orgin https://github .com/xuyuandezuoye/zuoye2.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git remote add origin https://github .com/xuyuandezuoye/zuoye2.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git remote add origin https://github.com/xuyuandezuoye/zuoye2.git
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ cd testgit2/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git push origin dev
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/xuyuandezuoye/zuoye2.git/'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git push origin dev
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 448 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/xuyuandezuoye/zuoye2.git
+ * [new branch]      dev -> dev
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git clone https://github.com/xuyuandezuoye/zuoye2.git
+Cloning into 'zuoye2'...
+remote: Counting objects: 23, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 23 (delta 0), reused 23 (delta 0), pack-reused 0
+Unpacking objects: 100% (23/23), done.
+Checking connectivity... done.
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git branch
+* dev
+  master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git branch -d dev
+error: Cannot delete the branch 'dev' which you are currently on.
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git chenkout master
+git: 'chenkout' is not a git command. See 'git --help'.
+
+Did you mean this?
+        checkout
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (master)
+$ git branch -d dev
+Deleted branch dev (was f7b861f).
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (master)
+$ git branch
+* master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (master)
+$ git checkout -b dev origin/dev
+Branch dev set up to track remote branch dev from origin.
+Switched to a new branch 'dev'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ cat readme.txt
+cat: readme.txt: No such file or directory
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ ls
+zuoye2/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ cd zuoye2/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ cat readme.txt
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ cat readme.txt
+111111aaaaaaa
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git add readme.txt
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git commit -m "readme.txt增加内容1111aaa"
+[master 33191af] readme.txt增加内容1111aaa
+ 1 file changed, 1 insertion(+)
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git push origin dev
+error: src refspec dev does not match any.
+error: failed to push some refs to 'https://github.com/xuyuandezuoye/zuoye2.git'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ cd
+
+Administrator@YH-201602051838 MINGW32 ~
+$ cd /d/
+
+Administrator@YH-201602051838 MINGW32 /d
+$ cd testgit/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ git push origin dev
+Everything up-to-date
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ cd testgit2
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git push origin dev
+Everything up-to-date
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ git branch
+* dev
+  master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ cd zuoye2/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ cat readme.txt
+111111aaaaaaa
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/xuyuandezuoye/zuoye2.git
+   d3f09b3..33191af  master -> master
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git branch -d master
+error: Cannot delete the branch 'master' which you are currently on.
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (master)
+$ git checkout -b dev origin/dev
+Branch dev set up to track remote branch dev from origin.
+Switched to a new branch 'dev'
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ cat readme.txt
+cat: readme.txt: No such file or directory
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ ls
+test.txt
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git remote
+origin
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git remote -v
+origin  https://github.com/xuyuandezuoye/zuoye2.git (fetch)
+origin  https://github.com/xuyuandezuoye/zuoye2.git (push)
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git remote rm origin
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git add https://github.com/Narneyness/testgit
+fatal: pathspec 'https://github.com/Narneyness/testgit' did not match any files
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git remote add origin https://github.com/Narneyness/testgit.git
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ git remote -v
+origin  https://github.com/Narneyness/testgit.git (fetch)
+origin  https://github.com/Narneyness/testgit.git (push)
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2/zuoye2 (dev)
+$ cd ../
+
+Administrator@YH-201602051838 MINGW32 /d/testgit/testgit2 (dev)
+$ cd ../../
+
+Administrator@YH-201602051838 MINGW32 /d
+$ cd testgit
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ ls
+test.txt  testgit2/
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ cat test.xtx
+cat: test.xtx: No such file or directory
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ cat test.txt
 111aaa
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$ ^C
+
+Administrator@YH-201602051838 MINGW32 /d/testgit (dev)
+$
